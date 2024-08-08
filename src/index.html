@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body class="bg-[#dff1e7]">
+    <section
+      class="flex items-center justify-center text-white md:mb-[-7rem] mb-[-2rem]  relative z-10  hidden"
+      id="alert"
+    >
+      <div class="w-[70%] bg-green-800 px-8 pt-10 pb-8 rounded-md md:w-[30%] mt-5">
+        <h1>Message Sent!</h1>
+        <p class="text-[12px]">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-[#dff1e7] px-8 py-4 h-full md:flex md:items-center md:justify-center relative z-0"
+    >
+      <div class="bg-white px-[1rem] py-4 rounded-xl md:mt-[4rem]">
+        <h1 class="text-[2rem] font-bold mb-6">Contact Us</h1>
+        <form action="" class="space-y-4" name="myform" id="myform">
+          <div class="md:flex md:gap-6">
+            <div>
+              <!-- first name -->
+
+              <h1>First Name <span id="hashtag">*</span></h1>
+              <input
+                name="firstName"
+                type="text"
+                class="border-gray-200 border-2 focus:outline-green-100 w-[100%] py-3 rounded-lg md:w-[20rem] hover:border-b-0 px-3"
+                id="firstName"
+              />
+              <p class="text-red-700 hidden text-[10px]" id="FN-error">
+                This field is required
+              </p>
+            </div>
+            <div>
+              <!-- last name -->
+
+              <h1>Last Name <span id="hashtag">*</span></h1>
+              <input
+                type="text"
+                class="border-grey-200 border-2 focus:outline-green-100 w-[100%] py-3 rounded-lg md:w-[20rem] hover:border-b-0 px-3"
+                id="lastName"
+              />
+              <p class="text-red-700 hidden text-[10px]" id="lastNameError">
+                This field is required
+              </p>
+            </div>
+          </div>
+          <h1>Email Address <span id="hashtag">*</span></h1>
+          <input
+            type="text"
+            class="border-grey-200 border-2 focus:outline-green-100 w-[100%] py-3 rounded-lg hover:border-b-0 px-3"
+            id="email-input"
+          />
+          <p class="text-red-700 hidden text-[10px]" id="emailError">
+            Please enter a valid email address This field is required
+          </p>
+          <h1>Query Type <span id="hashtag">*</span></h1>
+          <div class="space-y-2 md:flex md:space-y-0 md:gap-6">
+            <!-- div containing the two radio boxes -->
+
+            <div
+              class="border-grey-200 border-2 focus:outline-green-100 space-x-2 px-4 py-3 rounded-lg md:w-[20rem] hover:border-b-0"
+              id="checkbox1Div"
+            >
+              <input type="radio" id="checkbox1" name="option"/>
+              <label for="checkbox1">General Enquiry</label>
+            </div>
+            <div
+              class="border-grey-200 border-2 focus:outline-green-100 space-x-2 px-4 py-3 rounded-lg md:w-[20rem] hover:border-b-0"
+              id="checkbox2Div"
+            >
+              <input type="radio" id="checkbox2" name="option" />
+              <label for="checkbox2">Support Request</label>
+            </div>
+            
+          </div>
+          <p class="text-red-700 hidden text-[10px]" id="radioError">
+              Please select a query type
+            </p>
+          <h1>Message <span id="hashtag">*</span></h1>
+          <textarea
+            name=""
+            id="textarea"
+            cols="30"
+            rows="8"
+            class="border-grey-200 border-2 w-[100%] focus:outline-green-100 hover:border-b-0 rounded-lg"
+          >
+          </textarea>
+          <p class="text-red-700 hidden text-[10px]" id="textareaError">This field is required</p>
+          <div class="flex items-center gap-3">
+            <!-- div containing the consent check box -->
+            <input type="checkbox" name="" id="consent" />
+            <label for="consent" class="leading-5"
+              >I consent to being contacted by the team</label
+            >
+          </div>
+          <p class="text-red-700 hidden text-[10px]" id="consent-para">
+            To submit this form, please consent to being contacted
+          </p>
+          <div
+            class="bg-[#0c7d69] text-center p-3 rounded-xl mt-3 hover:bg-green-950"
+            id="submit-div"
+          >
+            <input type="submit" value="Submit" class="text-white" id="submit-input"/>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 
+  Contact Us
+
+  First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent! -->
+    <!-- Thanks for completing the form. We'll be in touch soon!
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
